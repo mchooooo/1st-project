@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 리뷰작성하기 시작-->
+									<div>
+									<h3 class="s-property-title">리뷰작성하기 </h3>
+									
+									<input type="text" style="width:20%; height:20px; background-color:#F2F2F2" value=""><input type="text" value="본문"  style="background-color:#F2F2F2; position:relative; top:0px; left:4px; width:350px; height:17px"></div>
+									<div style="width:20%; height:100px; background-color:#F2F2F2">내용
+									<!-- <textarea rows="100" cols="100"></textarea> -->
+									
+									<textarea  style="overflow:auto; background-color:#F2F2F2; position:relative; top:-20px; left:150px; width:350px; height:100px"></textarea>
+										
+									</div>
+									<!-- 사진 업로드 -->
+									<div class="inputArea">
+									 <label for="gdsImg">이미지</label>
+									 <input type="file" id="gdsImg" name="file" />
+ 									 <div class="select_img"><img src="" /></div>
+ 									<script>
+ 									
+ 										$("#gdsImg").change(function(){
+ 										 	 if(this.files && this.files[0]) {
+  										 	 var reader = new FileReader;
+   											reader.onload = function(data) {
+   												$(".select_img img").attr("src", data.target.result).width(500);     													
+
+ 											}
+   										reader.readAsDataURL(this.files[0]);
+   										});
+ 										</script>
+										</div>
+									<!-- 사진 업로드 -->
+								</div>
+								<hr>
+								<!-- 리뷰작성하기 끝 -->
+
+</body>
+</html>
